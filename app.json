@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "frontend",
+    "name": "CydJerr",
     "slug": "frontend",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/logo-global.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -13,17 +13,39 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cydjerr.nation",
+      "buildNumber": "1.0.0",
+      "requireFullScreen": false,
+      "userInterfaceStyle": "light",
+      "infoPlist": {
+        "UIBackgroundModes": ["background-fetch"],
+        "NSCameraUsageDescription": "Cette application utilise la caméra pour capturer des photos.",
+        "NSPhotoLibraryUsageDescription": "Cette application accède à votre galerie photo."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logo-global.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.cydjerr.nation",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "softwareKeyboardLayoutMode": "pan"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "77635d8d-4150-48b2-bed3-cd41de7d90e5"
+      }
     }
   }
 }
