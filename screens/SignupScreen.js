@@ -257,7 +257,7 @@ const SignupScreen = () => {
         [
           {
             text: 'OK',
-            onPress: () => navigation.navigate('EmailVerification')
+            onPress: () => navigation.navigate('EmailVerification', { email: formData.email })
           }
         ]
       );

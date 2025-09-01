@@ -95,19 +95,17 @@ class AuthService {
         headers
       });
       
-      const { accessToken, refreshToken, user } = response.data;
+      // Le backend renvoie: { success: true, message: "...", data: { user: {...} } }
+      const { data, message } = response.data;
+      const user = data?.user;
       
-      // Sauvegarder les données d'authentification seulement si un token est fourni
-      if (accessToken && refreshToken && user) {
-        await saveAuthData(accessToken, refreshToken, user);
-      }
+      // Lors de l'inscription, pas de tokens - l'utilisateur doit vérifier son email
+      // Les tokens seront fournis après vérification de l'email
       
       return {
         success: true,
-        user: user || response.data.data?.user,
-        accessToken,
-        refreshToken,
-        message: response.data.message
+        user: user,
+        message: message || 'Inscription réussie. Veuillez vérifier votre email.'
       };
     } catch (error) {
       return {

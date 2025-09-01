@@ -2,14 +2,14 @@
 
 // URLs de base pour les différents environnements
 const API_ENDPOINTS = {
-  development: "http://192.168.1.68:4000/api/v1", // Adresse IP locale pour test
+  development: "http://192.168.1.67:4000/api/v1", // Serveur local pour développement
   staging: "https://staging-api.cydjerr.com/api/v1",
   production: "https://backend-cydjerr-8320e335909f.herokuapp.com/api/v1",
 };
 
 // Environnement actuel (à modifier selon le contexte)
 // Forcer l'utilisation de l'environnement de production pour utiliser le backend Heroku
-const ENVIRONMENT = "production";
+const ENVIRONMENT = "development";
 
 // Configuration alternative pour développement local si nécessaire
 // const ENVIRONMENT =
