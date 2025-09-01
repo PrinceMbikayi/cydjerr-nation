@@ -9,7 +9,7 @@ const API_ENDPOINTS = {
 
 // Environnement actuel (à modifier selon le contexte)
 // Forcer l'utilisation de l'environnement de production pour utiliser le backend Heroku
-const ENVIRONMENT = "development";
+const ENVIRONMENT = "production";
 
 // Configuration alternative pour développement local si nécessaire
 // const ENVIRONMENT =
